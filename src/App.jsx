@@ -41,6 +41,15 @@ const App = () => {
   return (
     <>
       <Header />
+
+      {/* Button linguaggi prendendo dagli array*/}
+      <div className="container mt-3">
+        {languages.map((language) => (
+          <button key={language.id} className='btn btn-primary m-2'>{language.title}</button>
+
+        ))}
+
+      </div>
     </>
   )
 }
