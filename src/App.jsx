@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import { useState } from 'react';
 
 {/*DATA*/ }
 
@@ -35,9 +36,11 @@ const languages = [
   }
 ];
 
-import React from 'react'
-
 const App = () => {
+
+  const [selectLanguage, setSelectLanguage] = useState(0);
+
+
   return (
     <>
       <Header />
@@ -45,14 +48,18 @@ const App = () => {
       {/* Button linguaggi prendendo dagli array*/}
       <div className="container mt-3">
         {languages.map((language) => (
-          <>
-            <button key={language.id} className='btn btn-primary m-2'>{language.title}</button>
-          </>
+          <button
+            key={language.id}
+            className='btn btn-primary m-2'
+            onClick={() => setSelectLanguage(language)}
+          >
+            {language.title}
+          </button>
         ))}
 
         <div className="card m-2 p-2">
-          <h3>{languages[0].title}</h3>
-          <p>{languages[0].description}</p>
+          <h3>{selectLanguage.title}</h3>
+          <p>{selectLanguage.description}</p>
         </div>
 
 
