@@ -17,3 +17,9 @@ Bonus
 4 - Scomporre i buttons in componenti a parte che mantengono tutte le funzionaliltà
 
 
+#### Cosa ho imparato
+Ho utilizzato per la prima volta useState. WUsto Hook di React serve a gestire lo stato all'interno del progetto React, in particolare ti permette di dicchiarare uno stato iniziale, leggere il suo valore e soprautitto aggiornarlo in modo che React ridisegni il Dom virtuale.  
+
+## C o n s e g n a : 2 8 / 0 8 / 2 0 2 5  
+
+
