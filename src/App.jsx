@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import { useState } from 'react';
 import Card from './components/Card';
+import Buttons from './components/Buttons';
 
 {/*DATA*/ }
 
@@ -49,17 +50,14 @@ const App = () => {
       {/* Button linguaggi prendendo dagli array*/}
       <div className="container mt-3">
         {languages.map((language) => (
-          <button
-            key={language.id}
-            className={` btn m-2 ${selectLanguage.id === language.id ? "btn-warning" : "btn-primary"}`}
-            onClick={() => setSelectLanguage(language)}
-          >
-            {language.title}
-          </button>
+          <Buttons
+            language={language}
+            selectLanguage={selectLanguage}
+            setSelectLanguage={setSelectLanguage}
+          />
         ))}
 
         <Card selectLanguage={selectLanguage} />
-
 
       </div>
     </>
